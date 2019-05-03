@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    I learned that Express comes with its own middleware and means of routing. The middleware allows developers to intercept request and response objects and change or examine them as necessary before returning them, or caling the next middleware in the stack before returning them and so on. common examples of when we might use middleware are authentication for security purposes or logging for debugging purposes. Routing lets us choose which request handler functions are performed based on both the URL being visited and whichever HTTP request is being invoked. 
+
 - [ ] Describe Middleware?
+
+    Again, middleware is simply a way for us as developers to work with request and response data before returning it to the user. On top of the out of the box middleware that Express provides, we can also create our own middleware to do perform unconventional actions upon our req/res data, such as formatting a name or title field to all uppercase before setting it in our database.  
 
 - [ ] Describe a Resource?
 
+    Resources are data that the server owner has access to in the backend that a client may want access to while on their site. Resources can be anything from users, to dates, descriptions, hobbits, etc. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    We can return HTTP status codes based on the CRUD action performed as well as a copy of the data that they asked for or even submitted in the case of a post/put request. We can also return copies of data that were removed in a delete request. 
+
 - [ ] How can we partition our application into sub-applications?
+
+    We can use Express routing so we can keep our index and server files small while handling requests in specific route files based on the url that we're trying to make requests from. 
 
 ## Project Setup
 
